@@ -7,7 +7,7 @@ git clone https://github.com/coswat/weather-app.git
 cd weather-app
 
 ```
-## Add Api in `Weather.php` in Line `29`
+Add Api in `Weather.php` in Line `29`
 
 ```php
 
