@@ -7,10 +7,13 @@ git clone https://github.com/coswat/weather-app.git
 cd weather-app
 
 ```
+## Api
+
 Add Api in `Weather.php` in Line `29`
 
 ```php
 
+//you will get Api from https://openweathermap.org
 $apikey = 'API KEY HERE';
 
 ```
