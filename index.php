@@ -2,9 +2,7 @@
 require_once __DIR__.'/class/Weather.php';
 
 $weather = new Weather($_SERVER['REMOTE_ADDR']);
-
 $weather->getInfo();
-
 $weather = $weather->load();
 date_default_timezone_set('Asia/Kolkata');
 $time = date("h:i:sa");

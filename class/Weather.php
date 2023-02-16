@@ -15,15 +15,17 @@ class Weather extends ApiCall{
   }
   public function getInfo():?string
   {
-    $url = 'https://api.ipfind.com/?ip=137.97.95.147';
+    $url = 'https://api.ipfind.com/?ip='.$this->ip.'';
     $apidata = $this->apiCall($url);
    $longitude = $apidata->longitude;
    $latitude = $apidata->latitude;
    return $this->getWeather($latitude,$longitude);
   }
-  public function getWeather(int|float $latitude,int|float $longitude):void
+  private function getWeather(int|float $latitude,int|float $longitude):void
   {
-    $url = 'https://api.openweathermap.org/data/2.5/weather?lat='.$latitude.'&lon='.$longitude.'&appid=7de46e453e1e91be61b09af02bcfbc7b&units=metric';
+    //to get api key go https://openweathermap.org
+    $apikey = 'API KEY HERE';
+    $url = 'https://api.openweathermap.org/data/2.5/weather?lat='.$latitude.'&lon='.$longitude.'&appid='.$apikey.'&units=metric';
     
     $apidata = $this->apiCall($url);
     $this->details[] = $apidata;
