@@ -9,7 +9,7 @@ cd weather-app
 ```
 ## Api
 
-add Api in `Weather.php` in Line `29`
+add Api in `Weather.php` in Line `27`
 
 ```php
 
